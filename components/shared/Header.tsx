@@ -10,14 +10,12 @@ interface Props {
 export const Header: FC<Props> = ({ title = '', subtitle = '' }) => {
   const theme = useTheme();
 
-  console.log(theme);
-
   return (
     <Box mt='5px' mb='30px'>
-      <Typography variant='h4' fontWeight='bold'>
+      <Typography variant='h5' fontWeight='bold'>
         {title}
       </Typography>
-      <Typography color={theme.palette.mode === 'light' ? 'primary.dark' : 'primary.light'} variant='h6'>
+      <Typography color={theme.palette.mode === 'light' ? 'primary.dark' : 'primary.light'} variant='subtitle1'>
         {subtitle}
       </Typography>
     </Box>
